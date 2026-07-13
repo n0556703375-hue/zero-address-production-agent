@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: zero-address-production-agent
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: OPENAI_API_KEY
+        sync: false
