@@ -1,0 +1,14 @@
+[project]
+name = "hebrew-agents-sdk-agent"
+version = "0.1.0"
+description = "A simple Hebrew assistant built with the OpenAI Agents SDK"
+requires-python = ">=3.10"
+dependencies = [
+  "openai-agents>=0.2.0",
+  "httpx[socks]>=0.27.0",
+  "fastapi>=0.115.0",
+  "uvicorn>=0.34.0",
+]
+
+[tool.uv]
+package = false
